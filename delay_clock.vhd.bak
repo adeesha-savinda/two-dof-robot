@@ -1,0 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity delay_clock is
+	port(	clk,ena	:in 	std_logic;
+			pre		:in	std_logic_vector(25 downto 0);
+			new_ang	:in	std_logic_vector(25 downto 0);
+			out_ang	:out	std_logic_vector(25 downto 0));
+end entity;
+
+architecture behavior of delay_clock is
+
+signal ctr 		:std_logic_vector(25 downto 0);
+signal ctr_low	:std_logic_vector(25 downto 0);
+signal ovf		:std_logic;
+
+begin
+	process(CLK)
+	begin
+		--10111110101111000010000000 for 1 sec
+		--00010011000100101101000000 for 1/10 sec
+		--00000011110100001001000000 for 20ms
+		--00000000011000011010100000 for 2 ms
+		--00000000001100001101010000 for 1 ms		
+		if(ctr =  "00000011110100001001000000") then
+			ctr <= "00000000000000000000000000";
+			ovf <= '1';
+		elsif(rising_edge(CLK)) then
+			ctr <= ctr+1;
+			ovf < = '0';
+		end if;
+	end process;
+	
+	process(ovf)
+	begin	
+		if(ena = '1') then
+			if(ctr_low =  new_ang) then
+				ctr_low <= new_ang;
+				out_ang <= ctr_low;
+			elsif(rising_edge(ovf)) then
+				ctr_low <= pre+1;
+				out_ang <= ctr_low;
+			end if;
+		end if;
+	end process;
+end behavior;

@@ -1,0 +1,109 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'delay_clock:CLK2|ovf'
+Slack : -8.105
+TNS   : -315.750
+
+Type  : Slow Model Setup 'CLK_50'
+Slack : -3.539
+TNS   : -175.820
+
+Type  : Slow Model Setup 'sampling_clock:CLK1|ovf'
+Slack : -0.210
+TNS   : -0.210
+
+Type  : Slow Model Hold 'sampling_clock:CLK1|ovf'
+Slack : -1.681
+TNS   : -3.194
+
+Type  : Slow Model Hold 'delay_clock:CLK2|ovf'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLK_50'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'CLK_50'
+Slack : -4.904
+TNS   : -348.266
+
+Type  : Slow Model Removal 'CLK_50'
+Slack : 2.901
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLK_50'
+Slack : -1.941
+TNS   : -120.661
+
+Type  : Slow Model Minimum Pulse Width 'delay_clock:CLK2|ovf'
+Slack : -0.742
+TNS   : -75.684
+
+Type  : Slow Model Minimum Pulse Width 'sampling_clock:CLK1|ovf'
+Slack : -0.742
+TNS   : -4.452
+
+Type  : Slow Model Minimum Pulse Width 'state_now.A'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'state_now.B'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'delay_clock:CLK2|ovf'
+Slack : -2.424
+TNS   : -80.793
+
+Type  : Fast Model Setup 'CLK_50'
+Slack : -0.686
+TNS   : -17.688
+
+Type  : Fast Model Setup 'sampling_clock:CLK1|ovf'
+Slack : 0.580
+TNS   : 0.000
+
+Type  : Fast Model Hold 'sampling_clock:CLK1|ovf'
+Slack : -0.941
+TNS   : -1.850
+
+Type  : Fast Model Hold 'delay_clock:CLK2|ovf'
+Slack : -0.214
+TNS   : -1.932
+
+Type  : Fast Model Hold 'CLK_50'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'CLK_50'
+Slack : -0.991
+TNS   : -65.707
+
+Type  : Fast Model Removal 'CLK_50'
+Slack : 1.051
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLK_50'
+Slack : -1.380
+TNS   : -81.380
+
+Type  : Fast Model Minimum Pulse Width 'delay_clock:CLK2|ovf'
+Slack : -0.500
+TNS   : -51.000
+
+Type  : Fast Model Minimum Pulse Width 'sampling_clock:CLK1|ovf'
+Slack : -0.500
+TNS   : -3.000
+
+Type  : Fast Model Minimum Pulse Width 'state_now.A'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'state_now.B'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------
